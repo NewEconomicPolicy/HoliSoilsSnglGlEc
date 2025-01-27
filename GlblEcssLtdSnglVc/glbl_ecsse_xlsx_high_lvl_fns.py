@@ -116,7 +116,7 @@ def generate_sims_from_xls_or_nc(form):
 
         # generate weather dataset indices which enclose the AOI for this band
         num_band = 0
-        aoi_indices_fut, aoi_indices_hist = climgen.genLocalGrid(bbox_aoi, hwsd, snglPntFlag, num_band)
+        aoi_indices_fut, aoi_indices_hist = climgen.genLocalGrid(bbox_aoi, hwsd, snglPntFlag)
 
         # historic weather and future climate
         # ===================================
