@@ -25,7 +25,7 @@ import hwsd_bil
 from prepare_ecosse_files import make_ecosse_file
 from getClimGenFns import check_clim_nc_limits, associate_climate
 from litter_and_orchidee_fns import check_xls_crds_fname, check_xls_lttr_fname, fetch_nc_litter, resize_yrs_pi
-from glbl_ecsse_high_level_fns import simplify_soil_recs
+from glbl_ecsse_high_level_sp import simplify_soil_recs
 
 WARN_STR = '*** Warning *** '
 
