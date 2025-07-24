@@ -36,12 +36,15 @@ def resize_yrs_pi(sim_strt_yr, sim_end_yr, yrs_pi):
 
     sim_pis = []
     for iyr, yr in enumerate(sim_yrs):
-        if yr < yr_frst:
-            sim_pis.append(pi_frst)
-        elif yr > yr_last:
-            sim_pis.append(pi_last)
+        if yr >= yr_frst and yr <= yr_last:
+            indx = yrs_pi['yrs'].index(yr)
+            plnt_inpt = yrs_pi['pis'][indx]
+        elif yr < yr_frst:
+            plnt_inpt = pi_frst
         else:
-            sim_pis.append(yrs_pi['pis'][iyr])
+            plnt_inpt = pi_last
+
+        sim_pis.append(plnt_inpt)
 
     new_yrs_pi = {'yrs': sim_yrs, 'pis': sim_pis}
 
